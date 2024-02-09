@@ -1,7 +1,7 @@
-import "./App.css";
-import Expenses from "./Expenses/Expenses";
-
-function App() {
+import ExpenseItem from "./ExpenseItem";
+import Card from "../UI/Card";
+import "./Expenses.css";
+function Expenses() {
   const expenses = [
     {
       id: "e1",
@@ -32,13 +32,21 @@ function App() {
       LocationOfExpenditure: "New Orliance ",
     },
   ];
-  
   return (
-
-    <div >
-      <h1>React Js</h1>
-      <Expenses items={expenses}/>
-    </div>
+    <Card className="expenses">
+      {expenses.map((expense, key) => {
+        return (
+          <div>
+            <ExpenseItem
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+              location={expense.LocationOfExpenditure}
+            ></ExpenseItem>
+          </div>
+        );
+      })}
+    </Card>
   );
 }
-export default App;
+export default Expenses;
