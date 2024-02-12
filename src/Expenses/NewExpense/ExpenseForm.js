@@ -2,8 +2,8 @@ import React from 'react';
 import './ExpenseForm.css';
 const ExpenseForm=()=>{
     //document.getElementById('').addEventListener('click',(event)=>{})
-    const titleChangeHandler=(event)=>{
-        console.log(event.target.value);
+    const titleChangeHandler=()=>{
+        console.log('vanilla JS');
     }
     return <form>
 <div className="new-expense__controls">
