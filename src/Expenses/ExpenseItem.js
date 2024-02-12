@@ -4,19 +4,23 @@ import ExpenseDate from "../Expenses/ExpenseDate";
 import "./ExpenseItem.css";
 import ExpenseDetails from "../Expenses/ExpenseDetails";
 function ExpenseItem(props) {
-const [a, setAmount] = useState(props.amount);
-  const clickHandler = (event) => {
+  const [title, setTitle]=useState(props.title);
+  console.log('Expense item should be evaluated by react');
+  const clickHandler = () => {
    // event.target.parentNode.remove();
-    setAmount(100);
+   // title='updated!';
     // event.target.parentNode.remove();
+    setTitle('updated!');
+    console.log(title);
   };
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
+      <h2>title</h2>
       <ExpenseDetails
         title={props.title}
         location={props.location}
-        amount={a}
+        amount={props.amount}
       />
             <button onClick={clickHandler}>Change Title</button>
     </Card>
