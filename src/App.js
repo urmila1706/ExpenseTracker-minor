@@ -11,6 +11,7 @@ function App() {
       date: new Date(2020, 7, 14),
       LocationOfExpenditure: "Austria",
     },
+
     {
       id: "e2",
       title: "New TV",
@@ -26,10 +27,15 @@ function App() {
       LocationOfExpenditure: "Denmark",
     },
   ];
+  const addExpenseHandler=expense=>{
+    console.log('In App.js');
+    console.log(expense);
+
+  }
   return (
 
     <div >
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses}/>
     </div>
   );
