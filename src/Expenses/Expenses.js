@@ -41,7 +41,7 @@ const Initial_Expenses = [
     LocationOfExpenditure: "New Orliance ",
   },
 ];
-function Expenses(props) {
+function Expenses() {
   const [expenses, setExpenses] = useState(Initial_Expenses);
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
