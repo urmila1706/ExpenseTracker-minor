@@ -68,7 +68,7 @@ function Expenses() {
           selectedYear={filteredYear}
           onChangeFilter={filteredChangeHandler}
         />
-       <ExpensesChart Expenses={filteredExpenses}/>
+       <ExpensesChart expenses={filteredExpenses}/>
         
         <ExpensesList items={filteredExpenses}/>
              

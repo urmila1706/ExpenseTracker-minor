@@ -16,10 +16,14 @@ const ExpensesChart=(props)=>{
         {label:'Dec', value:0},
         
     ];
-    for(const expense in props.item){
+   // console.log(props.expenses);
+    for(const expense of props.expenses){
+       // console.log(expense);
         const expenseMonth=expense.date.getMonth();
-        ChartDataPoints[expenseMonth].value = expense.amount;
+        ChartDataPoints[expenseMonth].value += expense.amount;
     }
+    
+    //console.log(ChartDataPoints);
 return <Chart dataPoints={ChartDataPoints}/>;
 };
 export default ExpensesChart;

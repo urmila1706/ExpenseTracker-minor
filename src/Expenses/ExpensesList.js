@@ -3,9 +3,9 @@ import ExpenseItem from './ExpenseItem';
 import './ExpensesList.css';
 const ExpensesList=(props)=>{
 
-    if(props.items.length===1){
-        return <h2 className="expenses-list__fallback">"Only Single Expense Here.Please add more..."</h2>
-    }
+   if(props.items.length===1){
+      return <h2 className="expenses-list__fallback">"Only Single Expense Here.Please add more..."</h2>
+   }
     return <ul className="expenses-list">
 {props.items.map((expense) => (
         <div key={expense.id}>
